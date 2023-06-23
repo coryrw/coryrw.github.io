@@ -1,14 +1,41 @@
 <html>
   <head>
     <title>MultiMatch</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/grids.css" />
   </head>
   <body>
-    hello
-    <div id="drop_zone" ondrop="dropHandler(event);">
-      <p>Drag one or more files to this <i>drop zone</i>.</p>
+    <div id="container">
+      <div id="topArea">
+        <div id="primaryKitArea">
+          <div id="hoverDialog">Upload <span id="draggedKitsAmount">N</span> match lists</div>
+          <div id="uploadInfoArea">
+            <label for="matchListFilesInput"  id="uploadInfoLabel">Click here to browse for GEDMatch Match List files, or drag them to this area</label>
+            <input id="matchListFilesInput" style="display:none;" type="file" accept=".csv" multiple />
+            <!-- <button id="fileBrowseButton">Browse</button> for GEDMatch Match List files, or drag them to this area -->
+          </div>
+          <div id="primaryKitListArea">
+            <div id="primaryKitListContainer">
+              Primary kits go here
+              <button id="primaryKitGoToLogButton">Log</button>
+            </div>
+            <div id="primaryKitLogContainer">
+              Event log goes here
+              <button id="primaryKitGoToListButton">List</button>
+            </div>
+          </div>
+        </div>
+        <div id="groupsArea">haha</div>
+        <!-- <div id="drop_zone" style="text-align: center; width: 100%; border: 2px solid black">
+          <p>Click here to browse for GEDMatch Match List files, or drag them here</p>
+        </div> -->
+      </div>
+      <div id="bottomArea">
+        <div id="output_log" style="overflow: auto; margin: 5px; height: 200px; width: 600px; border: 1px solid black";>
+        </div>
+      </div>
     </div>
     
-    
-    <script type="text/javascript" src="./main.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
